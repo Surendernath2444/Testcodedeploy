@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo "Terraform apply"
-      - terraform apply --auto-approve 
+      - terraform apply -auto-approve 
 #  post_build:
 #    commands:
 #      - echo Build completed on `date`
