@@ -8,12 +8,10 @@ terraform {
 }
 
 provider "aws" {
-  # Configuration options
-aws_access_key_id = "AKIAQ3EGUOULI47244H2"
-aws_secret_access_key = "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"
-region = "us-east-1"
+  region     = "us-east-1"
+  access_key = "AKIAQ3EGUOULI47244H2"
+  secret_key = "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"
 }
-
 
 resource "aws_instance" "web" {
   ami           = "ami-0c7217cdde317cfec"
