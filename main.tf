@@ -7,10 +7,17 @@ terraform {
   }
 }
 
+backend "s3" {
+  bucket = "demoterraformcodebuild"
+  key    = "TESTCODEBUILDDEMO"
+  region = "us-east-1"
+  }
+
+
 provider "aws" {
   region     = "us-east-1"
-  access_key = "AKIAQ3EGUOULI47244H2"
-  secret_key = "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"
+  access_key = "AKIA3FLD2Z5GBJFE6QO2"
+  secret_key = "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"
 }
 
 resource "aws_instance" "web" {
