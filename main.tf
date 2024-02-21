@@ -7,13 +7,6 @@ terraform {
   }
 }
 
-backend "s3" {
-  bucket = "s3://codebuilds3test/"
-  key    = "s3://codebuilds3test/codebuilds3testfolder/"
-  region = "us-east-1"
-  }
-
-
 provider "aws" {
   region     = "us-east-1"
   access_key = "AKIATCKARQYVEN5V2KPJ"
@@ -28,3 +21,11 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+terraform {
+  backend "s3" {
+    bucket = "s3://codebuilds3test/"
+    key    = "s3://codebuilds3test/codebuilds3testfolder"
+    region = "us-east-1"
+  }
+}
+
