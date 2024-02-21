@@ -9,7 +9,7 @@ terraform {
 terraform {
   backend "s3" {
     bucket = "codebuilds3test"
-    key    = "codebuilds3testfolder"
+    key    = "path/to/terraform.tfstate"
     region = "us-east-1"
   }
 }
