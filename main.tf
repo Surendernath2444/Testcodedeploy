@@ -8,8 +8,8 @@ terraform {
 }
 
 backend "s3" {
-  bucket = "demoterraformcodebuild"
-  key    = "TESTCODEBUILDDEMO"
+  bucket = "s3://codebuilds3test/"
+  key    = "s3://codebuilds3test/codebuilds3testfolder/"
   region = "us-east-1"
   }
 
